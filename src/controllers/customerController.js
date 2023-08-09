@@ -137,4 +137,9 @@ const deleteCustomer = async (req, res) => {
      })
 };
 
-module.exports = { getBenefits,  deleteCustomer };
+const getTest = async (req, res) => {  
+     res.send('Conexion aprobada!')
+}
+     
+
+module.exports = { getBenefits,  deleteCustomer, getTest };
