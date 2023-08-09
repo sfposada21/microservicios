@@ -7,7 +7,7 @@ routes.get('/benefits', getBenefits);
 
 routes.post('/delete/:id', deleteCustomer);
 
-routes.get('/benefits', getTest);
+routes.get('/test', getTest);
 
 
 module.exports = routes
