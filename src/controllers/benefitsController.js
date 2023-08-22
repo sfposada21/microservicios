@@ -124,22 +124,13 @@ const getBenefits = async (req, res) => {
       }
 };
 
-
-const deleteCustomer = async (req, res) => {
-  const { id } = req.params;
-  console.log(req.params)
-  console.log(req.query)
-   req.getConnection((err, conn)=> {
-     if(err) return res.send(err)
-     conn.query("DELETE FROM customer WHERE id = ?", [id], (err, rows) =>{
-            res.send('Eliminado!')
-         })
-     })
-};
-
 const getTest = async (req, res) => {  
      res.send('Conexion aprobada!')
 }
+
+const postBitacora = async (req, res) => {  
+  res.send('Conexion aprobada!')
+}
      
 
-module.exports = { getBenefits,  deleteCustomer, getTest };
+module.exports = { getBenefits,  getTest, postBitacora };
